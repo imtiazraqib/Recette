@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Recipe from './recipe';
 import './App.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
     const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data);
   }
 
   return (
@@ -24,6 +26,13 @@ const App = () => {
         <input className="searchBar" type="text"/>
         <button className="searchButton" type="submit">Search</button>
       </form>
+      {recipes.map(recipe =>  (
+        <Recipe 
+        key={recipe.recipe.uri} 
+        title={recipe.recipe.label} 
+        calories={recipe.recipe.calories} 
+        image={recipe.recipe.image}/>
+      ))};
     </div>
     
   );

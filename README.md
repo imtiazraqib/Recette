@@ -1,3 +1,5 @@
+### Recette is now live - [Recette • Recipe Finder](https://www.imtiazraqib.com/main-projects/recette/)
+
 # What is Recette?
 Recette is a react based web app that displays recipes based on food-related keywords. Recette uses the developer bundle of [Edamam](https://www.edamam.com/) and incorporates the *[Recipe Search API](https://developer.edamam.com/edamam-recipe-api)*.
 

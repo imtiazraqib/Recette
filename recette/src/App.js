@@ -13,7 +13,7 @@ const App = () => {
   const [search, setSearch] = useState('');
 
   // Saving the state of the query once Search button is pressed
-  const [query, setQuery] = useState('Meat')
+  const [query, setQuery] = useState('Cabbage');
 
   // useEffect is used to only run getRecipes() once when the page first loads
   // and only when query changes and the search button is pressed
@@ -43,7 +43,7 @@ const App = () => {
   return (
     <Container className="App themed-container" fluid={true}>
       <Form onSubmit={getQueryRecipe} className="searchForm">
-        <input className="searchBar" type="text" placeholder="Meat" value={search} onChange={updateSearchBar} />
+        <input className="searchBar" type="text" placeholder="Cabbage" value={search} onChange={updateSearchBar} />
         <button className="searchButton" type="submit">Search</button>
       </Form>
       <Row>

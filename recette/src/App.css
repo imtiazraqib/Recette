@@ -22,7 +22,10 @@
 }
 
 .searchButton {
-  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: none;
   color: black;
   font-weight: 500;
@@ -34,8 +37,10 @@
 }
 
 .RecipeCard {
-  /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 .footerText {
@@ -54,4 +59,8 @@
 
 .nameLink:hover {
   text-decoration-color: #ace0f9;
+}
+
+.line {
+  border-color: #ace0f9;
 }

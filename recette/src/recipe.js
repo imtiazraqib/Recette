@@ -5,7 +5,7 @@ import { Col, Card, CardImg, CardBody, CardTitle, CardSubtitle, Button } from 'r
 const Recipe = ({title, calories, cookingTime, recipeLink, image}) => {
     return (
         
-        <Col xs="12" sm="6" md="4" lg="3" className="padding">
+        <Col xs="12" sm="6" md="4" lg="2" className="padding">
             <Card>
                 <CardImg top width="100%" src={image} />
                 <CardBody className="RecipeCard">

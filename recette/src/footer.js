@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <Container className="footer themed-container" fluid={true}>
-            <hr />
+            <hr className="line" />
             <p className="footerText">
                 Made with <FontAwesomeIcon className="faIcon" icon={faHeart} /> by <a className="nameLink" href="https://www.imtiazraqib.com" target="_blank"><span className="myName">Imtiaz Raqib</span></a> &copy; 2020
             </p>

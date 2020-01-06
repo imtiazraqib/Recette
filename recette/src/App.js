@@ -17,7 +17,6 @@ const App = () => {
     const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
-    console.log(data);
   }
 
   return (
@@ -31,6 +30,8 @@ const App = () => {
         key={recipe.recipe.uri} 
         title={recipe.recipe.label} 
         calories={recipe.recipe.calories} 
+        recipeLink={recipe.recipe.url} 
+        cookingTime={recipe.recipe.totalTime} 
         image={recipe.recipe.image}/>
       ))};
     </div>

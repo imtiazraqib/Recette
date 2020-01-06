@@ -1,5 +1,6 @@
 {
   "name": "recette",
+  "homepage": "http://www.imtiazraqib.com/main-projects/recette",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

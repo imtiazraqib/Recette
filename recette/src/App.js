@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Recipe from './recipe';
+import { Container, Row, Col, Button, Form } from 'reactstrap';
 import './App.css';
 
 const App = () => {
@@ -39,21 +40,23 @@ const App = () => {
   }
 
   return (
-    <div className="App">
-      <form onSubmit={getQueryRecipe} className="searchForm">
-        <input className="searchBar" type="text" value={search} onChange={updateSearchBar} />
+    <Container className="App themed-container" fluid={true}>
+      <Form onSubmit={getQueryRecipe} className="searchForm">
+        <input className="searchBar" type="text" placeholder="Meat" value={search} onChange={updateSearchBar} />
         <button className="searchButton" type="submit">Search</button>
-      </form>
+      </Form>
+      <Row>
       {recipes.map(recipe =>  (
-        <Recipe 
-        key={recipe.recipe.uri} 
-        title={recipe.recipe.label} 
-        calories={recipe.recipe.calories} 
-        recipeLink={recipe.recipe.url} 
-        cookingTime={recipe.recipe.totalTime} 
-        image={recipe.recipe.image}/>
-      ))};
-    </div>
+          <Recipe 
+          key={recipe.recipe.uri} 
+          title={recipe.recipe.label} 
+          calories={recipe.recipe.calories} 
+          recipeLink={recipe.recipe.url} 
+          cookingTime={recipe.recipe.totalTime} 
+          image={recipe.recipe.image}/>
+        ))}
+      </Row>
+    </Container>
     
   );
 }

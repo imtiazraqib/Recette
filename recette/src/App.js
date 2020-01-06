@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Recipe from './recipe';
+import Footer from './footer';
 import { Container, Row, Col, Button, Form } from 'reactstrap';
 import './App.css';
 
@@ -50,14 +51,16 @@ const App = () => {
           <Recipe 
           key={recipe.recipe.uri} 
           title={recipe.recipe.label} 
-          calories={recipe.recipe.calories} 
+          calories={parseInt(recipe.recipe.calories | 0)} 
           recipeLink={recipe.recipe.url} 
           cookingTime={recipe.recipe.totalTime} 
           image={recipe.recipe.image}/>
         ))}
       </Row>
-    </Container>
-    
+      <Row>
+        <Footer />
+      </Row>
+    </Container>    
   );
 }
 

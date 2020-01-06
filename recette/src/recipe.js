@@ -11,6 +11,7 @@ const Recipe = ({title, calories, cookingTime, recipeLink, image}) => {
                 <CardBody className="RecipeCard">
                     <CardTitle>{title}</CardTitle>
                     <CardSubtitle className="text-muted">{calories} cal | {cookingTime} min</CardSubtitle>
+                    <br />
                     <a href={recipeLink} target="_blank">
                         <Button color="info">See Recipe</Button>
                     </a>
